@@ -1,0 +1,164 @@
+/* Base styling */
+body {
+  background: url("img/patterns3.jpg") repeat top;
+}
+
+input, textarea {
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+}
+
+.bg-top {
+  margin: 90px 0px;
+}
+
+.container-opacity {
+  color: #000;
+  opacity: 0.9;
+  background-color: #10dce8;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Radio button styles */
+.input-radio {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.container input[type="radio"],
+.container input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  display: none;
+  cursor: pointer;
+}
+
+/* Custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #000;
+}
+
+/* Dot indicator inside radio button */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgb(255, 255, 255);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .bg-top {
+    margin: 70px 0;
+  }
+
+  .input-radio {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .bg-top {
+    margin: 50px 0;
+  }
+
+  .container-opacity {
+    padding: 15px;
+  }
+
+  .input-radio {
+    font-size: 18px;
+  }
+
+  .checkmark {
+    height: 22px;
+    width: 22px;
+  }
+
+  .container .checkmark:after {
+    top: 7px;
+    left: 7px;
+    width: 7px;
+    height: 7px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-top {
+    margin: 30px 0;
+  }
+
+  .container-opacity {
+    padding: 10px;
+  }
+
+  .input-radio {
+    font-size: 16px;
+  }
+
+  .checkmark {
+    height: 20px;
+    width: 20px;
+  }
+
+  .container .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (max-width: 576px) {
+  .bg-top {
+    margin: 20px 0;
+  }
+
+  .container-opacity {
+    padding: 5px;
+  }
+
+  .input-radio {
+    font-size: 14px;
+  }
+
+  .checkmark {
+    height: 18px;
+    width: 18px;
+  }
+
+  .container .checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 5px;
+    height: 5px;
+  }
+}
